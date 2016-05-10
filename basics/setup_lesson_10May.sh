@@ -10,5 +10,14 @@ git config --global user.name "Raspberry PI"
 git clone https://github.com/theiera/Iscola_IPSIA_Connect-IT.git
 cd Iscola_IPSIA_Connect-IT/
 
-mkdir basics
 cd basics
+
+# git status
+# git add basics/
+# git log
+# mv ~/setup_lesson_10May.sh basics/
+# git add basics/setup_lesson_10May.sh
+# git branch
+# git commit -m "Added basics directory."
+# git push origin master
+
