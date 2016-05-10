@@ -39,4 +39,11 @@ f = pylab.figure()
 pylab.plot(to_plot[:,0], to_plot[:,1])
 pylab.xlabel('Tempo in ms dal 1 Gen 1900')
 pylab.ylabel('Temperatura (C)')
+ 
+pylab.savefig('Temp_plot.png', dpi=None, facecolor='k', edgecolor='w',
+        orientation='portrait', papertype=None, format=None,
+        transparent=False, bbox_inches=None, pad_inches=0.1,
+        frameon=None)
+
+
 pylab.show()
