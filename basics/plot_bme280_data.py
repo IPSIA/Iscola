@@ -52,6 +52,17 @@ import matplotlib.pyplot as plt
 #from matplotlib import pylab
 
 f, axarr = plt.subplots(3, sharex=True)
+f.patch.set_facecolor('black')
+for ax in axarr:
+    ax.set_axis_bgcolor('red')
+    for pos in ['top','bottom','left','right']:
+        ax.spines[pos].set_color('white')
+    ax.tick_params(axis='x', colors='white')
+    ax.tick_params(axis='y', colors='white')
+    ax.yaxis.label.set_color('white')
+    ax.xaxis.label.set_color('white')
+    ax.title.set_color('white')
+    
 axarr[0].plot(to_plot[:,0], to_plot[:,1])
 axarr[0].set_title('Pressione atmosferica')
 axarr[0].set_ylabel('Pressione (Pa)')
