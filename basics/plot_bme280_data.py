@@ -54,7 +54,7 @@ import matplotlib.pyplot as plt
 f, axarr = plt.subplots(3, sharex=True)
 f.patch.set_facecolor('black')
 for ax in axarr:
-    ax.set_axis_bgcolor('red')
+    ax.set_axis_bgcolor('black')
     for pos in ['top','bottom','left','right']:
         ax.spines[pos].set_color('white')
     ax.tick_params(axis='x', colors='white')
@@ -63,22 +63,22 @@ for ax in axarr:
     ax.xaxis.label.set_color('white')
     ax.title.set_color('white')
     
-axarr[0].plot(to_plot[:,0], to_plot[:,1])
+axarr[0].plot(to_plot[:,0], to_plot[:,1],'w')
 axarr[0].set_title('Pressione atmosferica')
 axarr[0].set_ylabel('Pressione (Pa)')
 
 axarr[1].set_title('Umidita relativa')
 axarr[1].set_ylabel('Umidita relativa (%)')
-axarr[1].plot(to_plot[:,0], to_plot[:,2])
+axarr[1].plot(to_plot[:,0], to_plot[:,2],'w')
 
 axarr[0].set_title('Temperatura')
 axarr[0].set_ylabel('Temperatura (C)')
-axarr[2].plot(to_plot[:,0], to_plot[:,2])
+axarr[2].plot(to_plot[:,0], to_plot[:,2],'w')
 axarr[2].set_xlabel('Tempo in ms dal 1 Gen 1900')
 # pto_plot[:,0], to_plot[:,1]ylab.plot(to_plot[:,0], to_plot[:,1])
 #pylab.plot( to_plot[:,0])
 
-MagicMirror_dir = '/Users/theiera/git_blacksmith/MagicMirror/modules/default/weatherforecast/'
+MagicMirror_dir = '/home/ipsia/git/MagicMirror/modules/default/newsfeed/'
 file_to_save = MagicMirror_dir + 'foto.png'
 
 plt.savefig(file_to_save,
